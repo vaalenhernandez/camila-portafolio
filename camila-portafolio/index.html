@@ -1,0 +1,561 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="description" content="Camila González: Community Manager, UGC, creadora de contenido y editora.">
+<title>Camila González</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400;0,6..96,600;0,6..96,800;1,6..96,400;1,6..96,600&family=Pinyon+Script&family=Titillium+Web:wght@400;600;700&display=swap">
+<style>
+/* Layout: playful one-page portfolio — rounded cards on a sand ground, wavy dividers, tilted marquee ribbons, carousels; Camila's beige/café identity plus a blush accent */
+:root{
+  --sand:#EADCC9; --bone:#F5EFE8; --paper:#FFFCF8;
+  --cocoa:#5B3A22; --cocoa-2:#86603F; --ink:#2E1F14;
+  --blush:#E7B6A2; --blush-2:#F3D6C9; --caramel:#B87B45; --line:#E0CFBA;
+  --display:"Bodoni Moda",Didot,"Times New Roman",serif;
+  --script:"Pinyon Script","Snell Roundhand",cursive;
+  --body:"Titillium Web","Segoe UI",system-ui,sans-serif;
+  --r:28px;
+  color-scheme:light;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:110px}
+body{background:var(--sand);color:var(--cocoa);font-family:var(--body);font-size:17px;line-height:1.6;margin:0}
+main{overflow-x:clip}
+[hidden]{display:none!important}
+a{color:inherit}
+img{display:block}
+h1,h2,h3{text-wrap:balance;margin:0}
+p{margin:0}
+.wrap{max-width:1180px;margin:0 auto;padding-inline:clamp(16px,4vw,40px)}
+.eyebrow{font-size:.76rem;letter-spacing:.18em;text-transform:uppercase;font-weight:700;color:var(--cocoa-2)}
+.h2{font-family:var(--display);font-weight:800;font-size:clamp(2.1rem,5vw,3.6rem);line-height:1.02;color:var(--cocoa)}
+.h2 em{display:block;font-style:italic;font-weight:400;color:var(--caramel)}
+.sec-head{display:grid;grid-template-columns:minmax(0,1.3fr) minmax(0,1fr);gap:20px 56px;align-items:end;margin-bottom:36px}
+.sec-head p{max-width:46ch}
+
+.btn{display:inline-flex;align-items:center;gap:10px;padding:13px 24px;border-radius:999px;text-decoration:none;font-weight:700;font-size:.95rem;letter-spacing:.02em;border:1.5px solid transparent;cursor:pointer;font-family:inherit;transition:transform .2s,background .2s}
+.btn svg{width:18px;height:18px;transition:transform .2s}
+.btn:hover svg{transform:translateX(4px)}
+.btn.primary{background:var(--cocoa);color:var(--paper);box-shadow:0 10px 24px -12px rgba(91,58,34,.7)}
+.btn.primary:hover{transform:translateY(-2px)}
+.btn.soft{background:var(--blush-2);color:var(--cocoa)}
+.btn.soft:hover{background:var(--blush)}
+.btn.line{border-color:var(--cocoa);color:var(--cocoa);background:transparent}
+.btn.line:hover{background:var(--blush-2)}
+.btn:focus-visible,.chip:focus-visible,.icon-btn:focus-visible,.card-link:focus-visible,.dock a:focus-visible,.menu a:focus-visible{outline:2.5px solid var(--caramel);outline-offset:3px}
+
+header.top{position:sticky;top:env(safe-area-inset-top,0px);z-index:30;padding-block:10px;background:color-mix(in srgb,var(--sand) 92%,transparent);backdrop-filter:blur(10px)}
+.bar{display:flex;align-items:center;justify-content:space-between;gap:16px;background:var(--paper);border-radius:999px;padding:8px 8px 8px 22px;box-shadow:0 8px 28px -18px rgba(91,58,34,.5)}
+.logo{font-family:var(--display);font-style:italic;font-weight:600;font-size:1.45rem;text-decoration:none;color:var(--cocoa)}
+.logo b{font-style:normal;color:var(--caramel)}
+.menu{display:flex;gap:4px;list-style:none;margin:0;padding:0}
+.menu a{display:block;text-decoration:none;font-size:.88rem;font-weight:600;padding:8px 14px;border-radius:999px;transition:background .2s}
+.menu a:hover,.menu a.on{background:var(--blush-2)}
+.bar .btn{padding:10px 18px;font-size:.88rem}
+
+.hero{padding-block:8px 0}
+.hero-card{position:relative;display:grid;grid-template-columns:minmax(0,1.15fr) minmax(0,1fr);background:var(--paper);border-radius:var(--r);overflow:hidden;min-height:540px}
+.hero-copy{padding:clamp(28px,5vw,64px);display:flex;flex-direction:column;justify-content:center;gap:22px;min-width:0}
+.hello{font-family:var(--script);font-size:clamp(2rem,4vw,2.8rem);color:var(--caramel);line-height:1}
+.hero h1{font-family:var(--display);font-weight:800;font-size:clamp(3rem,7.4vw,5.8rem);line-height:.92;color:var(--cocoa);letter-spacing:-.01em;margin-top:-10px}
+.hero h1 span{display:block;font-weight:400;font-style:italic;color:var(--cocoa-2)}
+.hero .lead{font-size:1.12rem;max-width:40ch}
+.roles{display:flex;flex-wrap:wrap;gap:8px;margin:0;padding:0;list-style:none}
+.roles li{background:var(--bone);border:1px solid var(--line);padding:5px 14px;border-radius:999px;font-size:.78rem;font-weight:700;letter-spacing:.06em;text-transform:uppercase}
+.cta{display:flex;flex-wrap:wrap;gap:12px}
+.hero-art{position:relative;background:#EADDCC;display:flex;align-items:flex-end;justify-content:center;min-width:0;overflow:hidden}
+.hero-art img{position:relative;width:min(88%,430px);height:auto;-webkit-mask-image:linear-gradient(#000 90%,transparent);mask-image:linear-gradient(#000 90%,transparent)}
+.spark{position:absolute;color:var(--caramel);animation:tw 3.2s ease-in-out infinite;z-index:1}
+.spark svg{width:100%;height:100%}
+.sticker{position:absolute;z-index:2;left:clamp(12px,3vw,28px);top:clamp(18px,4vw,40px);background:var(--cocoa);color:var(--paper);border-radius:50%;width:112px;height:112px;display:grid;place-items:center;text-align:center;font-family:var(--display);font-style:italic;font-size:1.05rem;line-height:1.1;transform:rotate(-12deg);box-shadow:0 12px 24px -12px rgba(46,31,20,.6)}
+@keyframes tw{0%,100%{transform:scale(1) rotate(0)}50%{transform:scale(.7) rotate(25deg)}}
+
+.ribbon{margin-block:34px 8px;transform:rotate(-2deg);background:var(--cocoa);color:var(--paper);overflow:hidden;padding-block:12px;width:104%;margin-left:-2%;box-shadow:0 10px 20px -14px rgba(46,31,20,.6)}
+.ribbon.alt{transform:rotate(1.6deg);background:var(--blush);color:var(--cocoa);margin-block:8px 34px}
+.track{display:flex;width:max-content;animation:mq 34s linear infinite}
+.ribbon.alt .track{animation-direction:reverse}
+.track span{font-family:var(--display);font-style:italic;font-weight:600;font-size:1.35rem;white-space:nowrap;padding-inline:18px;display:flex;align-items:center;gap:36px}
+.track span::after{content:"✦";font-style:normal;font-size:1rem}
+@keyframes mq{to{transform:translateX(-50%)}}
+
+.wave{display:block;width:100%;height:clamp(24px,4.5vw,56px);margin-bottom:-1px}
+.wave.flip{transform:scaleY(-1);margin:-1px 0 0}
+.band{background:var(--paper)}
+.band.bone{background:var(--bone)}
+section.block{padding-block:clamp(48px,7vw,88px)}
+
+.cards{display:flex;gap:18px;overflow-x:auto;scroll-snap-type:x mandatory;padding:18px 6px 28px;scrollbar-width:none}
+.cards::-webkit-scrollbar{display:none}
+.svc{flex:0 0 clamp(220px,19%,250px);scroll-snap-align:start;background:var(--paper);border-radius:24px;padding:22px;display:flex;flex-direction:column;gap:12px;box-shadow:0 14px 30px -20px rgba(91,58,34,.55);transition:transform .3s}
+.svc:nth-child(odd){transform:rotate(-2deg)} .svc:nth-child(even){transform:rotate(2deg);background:var(--blush-2)}
+.svc:hover{transform:rotate(0) translateY(-6px)}
+.svc .ico{width:52px;height:52px;border-radius:16px;background:var(--cocoa);color:var(--paper);display:grid;place-items:center}
+.svc .ico svg{width:26px;height:26px}
+.svc h3{font-family:var(--display);font-weight:800;font-size:1.35rem;line-height:1.1}
+.svc p{font-size:.95rem}
+
+.profile{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px}
+.panel{background:var(--paper);border-radius:var(--r);padding:clamp(24px,4vw,44px);position:relative;min-width:0}
+.panel.blush{background:var(--blush-2)}
+.ph{font-family:var(--display);font-weight:800;font-size:clamp(1.9rem,3.6vw,2.6rem);line-height:1.05;margin-bottom:20px}
+.edu{display:grid;gap:14px}
+.edu-item{display:grid;grid-template-columns:44px minmax(0,1fr);gap:14px;align-items:start;background:var(--bone);border-radius:18px;padding:16px}
+.edu-item .n{width:44px;height:44px;border-radius:50%;background:var(--caramel);color:var(--paper);display:grid;place-items:center}
+.edu-item .n svg{width:22px;height:22px}
+.edu-item b{display:block;font-size:1.08rem;color:var(--ink);line-height:1.3}
+.edu-item span{font-size:.94rem}
+.skills{display:flex;flex-wrap:wrap;gap:10px;list-style:none;margin:0;padding:0}
+.skills li{background:var(--paper);border-radius:999px;padding:9px 16px;font-weight:600;font-size:.95rem;display:flex;align-items:center;gap:8px}
+.skills li::before{content:"✦";color:var(--caramel);font-size:.8rem}
+.burst{position:absolute;right:24px;top:24px;width:60px;color:var(--cocoa)}
+
+.toolbar{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:14px;margin-bottom:18px}
+.chips{display:flex;flex-wrap:wrap;gap:8px}
+.chip{font:inherit;font-weight:700;font-size:.88rem;padding:9px 18px;border-radius:999px;border:1.5px solid var(--line);background:var(--paper);color:var(--cocoa);cursor:pointer;transition:background .2s,color .2s}
+.chip:hover{background:var(--blush-2)}
+.chip[aria-pressed="true"]{background:var(--cocoa);border-color:var(--cocoa);color:var(--paper)}
+.arrows{display:flex;gap:8px}
+.icon-btn{width:46px;height:46px;border-radius:50%;border:none;background:var(--blush-2);color:var(--cocoa);display:grid;place-items:center;cursor:pointer;transition:background .2s;font:inherit;font-weight:700;text-decoration:none}
+.icon-btn:hover{background:var(--blush)}
+.icon-btn svg{width:20px;height:20px}
+.reels{display:flex;gap:20px;overflow-x:auto;scroll-snap-type:x mandatory;padding:6px 6px 20px;scrollbar-width:thin;scrollbar-color:var(--blush) transparent}
+.reel{flex:0 0 clamp(200px,22%,250px);scroll-snap-align:start}
+.card-link{display:block;width:100%;text-align:left;font:inherit;color:inherit;background:none;border:none;padding:0;cursor:pointer;border-radius:26px}
+.screen{position:relative;aspect-ratio:9/16;max-width:100%;border-radius:26px;overflow:hidden;background:var(--blush-2);box-shadow:0 18px 34px -20px rgba(46,31,20,.65)}
+.screen img{width:100%;height:100%;object-fit:cover;object-position:top;transition:transform .5s}
+.card-link:hover .screen img{transform:scale(1.05)}
+.tag{position:absolute;top:12px;left:12px;background:var(--paper);color:var(--cocoa);font-size:.72rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;padding:5px 10px;border-radius:999px}
+.badge{position:absolute;top:10px;right:10px;width:46px;height:46px;border-radius:50%;background:var(--caramel);color:var(--paper);display:grid;place-items:center;font-family:var(--display);font-style:italic;font-weight:600;font-size:.95rem;transform:rotate(12deg)}
+.reel .meta{padding:12px 6px 0}
+.reel .meta b{display:block;color:var(--ink);font-size:1.05rem;line-height:1.25}
+.reel .meta span{font-size:.9rem;color:var(--cocoa-2)}
+.proj-cta{display:flex;justify-content:center;margin-top:18px}
+
+.chat{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px;align-items:start}
+.col{display:grid;gap:18px;min-width:0}
+.bubble{background:var(--paper);border-radius:6px 22px 22px 22px;padding:16px 18px 12px;box-shadow:0 10px 24px -18px rgba(46,31,20,.55)}
+.bubble.me{background:var(--blush-2);border-radius:22px 6px 22px 22px}
+.bubble p{color:var(--ink);font-size:1.02rem}
+.bubble.xl p{font-size:1.22rem;line-height:1.45;font-family:var(--display)}
+.bubble footer{display:flex;justify-content:space-between;gap:12px;margin-top:8px;font-size:.74rem;letter-spacing:.06em;text-transform:uppercase;color:var(--cocoa-2);font-weight:700}
+.bubble footer i{font-style:normal;font-weight:400;letter-spacing:0;text-transform:none}
+.clients-title .s{font-family:var(--script);font-weight:400;font-size:clamp(2.4rem,5vw,3.6rem);color:var(--caramel);line-height:1;display:block}
+.clients-title b{font-family:var(--display);font-weight:800;font-size:clamp(3rem,8vw,5.6rem);line-height:.9;display:block;color:var(--cocoa)}
+
+.why{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);background:var(--paper);border-radius:var(--r);overflow:hidden}
+.why-art{background:var(--cocoa);color:var(--paper);padding:clamp(28px,5vw,56px);display:flex;flex-direction:column;justify-content:flex-end;gap:12px;position:relative;min-height:340px;overflow:hidden}
+.why-art::before{content:"";position:absolute;width:420px;height:420px;border-radius:50%;background:radial-gradient(circle,var(--caramel),transparent 70%);top:-140px;right:-120px;opacity:.55}
+.why-art h2{position:relative;font-family:var(--display);font-weight:800;font-size:clamp(2.4rem,5vw,3.8rem);line-height:.98}
+.why-art h2 em{display:block;font-weight:400;color:var(--blush)}
+.why-list{list-style:none;margin:0;padding:clamp(28px,5vw,56px);display:grid;gap:26px;align-content:center}
+.why-list li{display:grid;grid-template-columns:28px minmax(0,1fr);gap:14px}
+.why-list li::before{content:"✦";color:var(--caramel);font-size:1.4rem;line-height:1.2}
+.why-list b{display:block;font-size:1.15rem;color:var(--ink)}
+
+.plans{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:22px;max-width:900px;margin-inline:auto}
+.plan{background:var(--paper);border-radius:var(--r);padding:clamp(26px,4vw,40px);display:flex;flex-direction:column;gap:18px;min-width:0;box-shadow:0 18px 40px -26px rgba(46,31,20,.6)}
+.plan.feat{background:var(--cocoa);color:var(--paper)}
+.plan .pill{align-self:flex-start;font-size:.74rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;padding:5px 12px;border-radius:999px;background:var(--blush-2);color:var(--cocoa)}
+.plan.feat .pill{background:var(--caramel);color:var(--paper)}
+.plan h3{font-family:var(--display);font-weight:800;font-size:2.2rem;line-height:1}
+.plan .for{font-size:.98rem;opacity:.85}
+.plan ul{list-style:none;margin:0;padding:18px 0;border-block:1px dashed color-mix(in srgb,currentColor 35%,transparent);display:grid;gap:10px;flex:1}
+.plan li{display:grid;grid-template-columns:24px 1fr;gap:10px;align-items:start}
+.plan li svg{width:22px;height:22px;margin-top:2px;color:var(--caramel)}
+.plan.feat li svg{color:var(--blush)}
+.price{font-family:var(--display);font-size:clamp(2.1rem,4vw,2.8rem);font-weight:800;font-variant-numeric:tabular-nums;line-height:1}
+.price small{font-family:var(--body);font-size:.95rem;font-weight:400;opacity:.8}
+.plan .btn{justify-content:center}
+.plan.feat .btn.primary{background:var(--paper);color:var(--cocoa)}
+
+.contact{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:22px}
+.contact h2{font-family:var(--display);font-weight:800;font-size:clamp(2.2rem,5vw,3.4rem);line-height:1}
+.contact h2 em{display:block;font-weight:400;color:var(--caramel)}
+.direct{display:grid;gap:12px;margin-top:26px}
+.drow{display:flex;align-items:center;justify-content:space-between;gap:12px;background:var(--bone);border-radius:18px;padding:12px 12px 12px 18px;flex-wrap:wrap}
+.drow span{font-size:1.2rem;font-weight:700;color:var(--ink);font-variant-numeric:tabular-nums}
+.drow small{display:block;font-size:.74rem;letter-spacing:.1em;text-transform:uppercase;color:var(--cocoa-2);font-weight:700}
+.drow .btn{padding:9px 16px;font-size:.85rem}
+form{display:grid;gap:14px}
+label{font-weight:700;font-size:.85rem;display:grid;gap:6px}
+input,select,textarea{font:inherit;font-size:1rem;font-weight:400;color:var(--ink);background:var(--paper);border:1.5px solid var(--line);border-radius:14px;padding:12px 14px;width:100%}
+input:focus,select:focus,textarea:focus{outline:none;border-color:var(--caramel);box-shadow:0 0 0 3px var(--paper)}
+textarea{min-height:96px;resize:vertical}
+.frow{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.hint{font-size:.85rem;color:var(--cocoa-2)}
+
+footer.site{padding-block:24px 40px;text-align:center;font-size:.9rem}
+footer.site .logo{font-size:2rem;display:block;margin-bottom:6px}
+
+.dock{display:none}
+
+.lb{position:fixed;inset:0;z-index:60;background:rgba(46,31,20,.72);backdrop-filter:blur(6px);display:grid;place-items:center;padding:20px}
+.lb-card{background:var(--paper);border-radius:var(--r);padding:18px;display:grid;grid-template-columns:minmax(0,260px) minmax(0,300px);gap:24px;align-items:center;max-height:92vh;overflow:auto;position:relative}
+.lb-card .screen{box-shadow:none}
+.lb-card h3{font-family:var(--display);font-weight:800;font-size:1.9rem;line-height:1.05;color:var(--ink)}
+.lb-info{display:grid;gap:14px;padding-right:12px}
+.lb-close{position:absolute;top:12px;right:12px;z-index:1}
+
+@media (max-width:900px){
+  .menu{display:none}
+  .hero-card,.why,.profile,.contact,.plans,.sec-head{grid-template-columns:1fr}
+  .hero-art{min-height:400px}
+  .chat{grid-template-columns:1fr 1fr}
+  .chat .col:nth-child(3){grid-column:1/-1;grid-template-columns:1fr 1fr}
+}
+@media (max-width:640px){
+  body{padding-bottom:calc(84px + env(safe-area-inset-bottom,0px))}
+  .bar .btn{display:none}
+  .bar{padding:12px 20px;justify-content:center}
+  .chat,.chat .col:nth-child(3){grid-template-columns:1fr}
+  .frow{grid-template-columns:1fr}
+  .lb-card{grid-template-columns:1fr;justify-items:center;padding-top:64px}
+  .lb-card .screen{width:200px}
+  .sticker{width:92px;height:92px;font-size:.92rem}
+  .reel{flex-basis:62%}
+  .dock{display:flex;position:fixed;left:12px;right:12px;bottom:calc(12px + env(safe-area-inset-bottom,0px));z-index:40;background:var(--paper);border-radius:999px;justify-content:space-around;padding:8px;box-shadow:0 12px 32px -10px rgba(46,31,20,.5)}
+  .dock a{display:grid;justify-items:center;gap:2px;text-decoration:none;font-size:.68rem;font-weight:700;color:var(--cocoa);padding:4px 10px;border-radius:16px}
+  .dock a.on{background:var(--blush-2)}
+  .dock svg{width:22px;height:22px}
+}
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  .track,.spark{animation:none}
+  *{transition:none!important}
+}
+</style>
+</head>
+<body>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="arrow" viewBox="0 0 24 24"><path d="M4 12h15m-6-6 6 6-6 6" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+  <symbol id="spark" viewBox="0 0 24 24"><path d="M12 0c.9 6.4 5.6 11.1 12 12-6.4.9-11.1 5.6-12 12-.9-6.4-5.6-11.1-12-12C6.4 11.1 11.1 6.4 12 0z" fill="currentColor"/></symbol>
+  <symbol id="check" viewBox="0 0 24 24"><circle cx="12" cy="12" r="11" fill="currentColor" opacity=".2"/><path d="m7 12.5 3.2 3.2L17 9" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+  <symbol id="wa" viewBox="0 0 24 24"><path fill="currentColor" d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2c-1.5 0-3-.4-4.3-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.2-.4.7-1.3.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5c-.2 0-.4.1-.7.3-.2.3-.9.9-.9 2.2s.9 2.5 1 2.7c.1.2 1.8 2.8 4.4 3.9 1.6.7 2.3.8 3.1.6.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.2-1.2-.1-.1-.3-.2-.5-.3z"/></symbol>
+  <symbol id="ig" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/></g><circle cx="17.5" cy="6.5" r="1.2" fill="currentColor"/></symbol>
+  <symbol id="tt" viewBox="0 0 24 24"><path fill="currentColor" d="M16.6 5.8A4.3 4.3 0 0 1 15.5 3h-3.1v12.4a2.6 2.6 0 1 1-1.8-2.5V9.7a5.7 5.7 0 1 0 4.9 5.7V9.1a7.4 7.4 0 0 0 4.3 1.4V7.4a4.3 4.3 0 0 1-3.2-1.6z"/></symbol>
+  <symbol id="play" viewBox="0 0 24 24"><path fill="currentColor" d="M8 5.5v13l10.5-6.5z"/></symbol>
+  <symbol id="grid" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="7" height="7" rx="2"/><rect x="14" y="3" width="7" height="7" rx="2"/><rect x="3" y="14" width="7" height="7" rx="2"/><rect x="14" y="14" width="7" height="7" rx="2"/></g></symbol>
+  <symbol id="tag" viewBox="0 0 24 24"><path d="M3 12V4a1 1 0 0 1 1-1h8l9 9-9 9z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><circle cx="8" cy="8" r="1.6" fill="currentColor"/></symbol>
+  <symbol id="user" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="8" r="4"/><path d="M4 21c1.5-4 4.5-6 8-6s6.5 2 8 6"/></g></symbol>
+  <symbol id="chat" viewBox="0 0 24 24"><path d="M4 5h16v11H9l-5 4z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></symbol>
+</svg>
+
+<header class="top">
+  <div class="wrap">
+    <div class="bar">
+      <a class="logo" href="#inicio">camila<b>.</b>gv</a>
+      <ul class="menu">
+        <li><a href="#servicios">Servicios</a></li>
+        <li><a href="#proyectos">Proyectos</a></li>
+        <li><a href="#clientes">Clientes</a></li>
+        <li><a href="#planes">Planes</a></li>
+        <li><a href="#perfil">Perfil</a></li>
+      </ul>
+      <a class="btn primary" href="#contacto">Cotizar <svg><use href="#arrow"/></svg></a>
+    </div>
+  </div>
+</header>
+
+<main>
+<section class="hero" id="inicio">
+  <div class="wrap">
+    <div class="hero-card">
+      <div class="hero-copy">
+        <span class="hello">Hola, soy</span>
+        <h1>Camila <span>González</span></h1>
+        <p class="lead">Planeo, grabo y edito contenido para redes que conecta con tu comunidad y hace que tu marca se sienta orgullosa.</p>
+        <ul class="roles"><li>Community Manager</li><li>UGC</li><li>Creadora de contenido</li><li>Editora</li></ul>
+        <div class="cta">
+          <a class="btn primary" href="#proyectos">Ver mis proyectos <svg><use href="#arrow"/></svg></a>
+          <a class="btn soft" href="#planes">Ver planes</a>
+        </div>
+      </div>
+      <div class="hero-art">
+        <div class="sticker">UGC<br>&amp; edición</div>
+        <span class="spark" style="right:12%;top:12%;width:34px;height:34px"><svg><use href="#spark"/></svg></span>
+        <span class="spark" style="right:24%;top:24%;width:18px;height:18px;animation-delay:1s"><svg><use href="#spark"/></svg></span>
+        <span class="spark" style="left:12%;bottom:34%;width:24px;height:24px;animation-delay:2s"><svg><use href="#spark"/></svg></span>
+        <img src="img/camila.jpg" alt="Retrato de Camila González" width="700" height="1167">
+      </div>
+    </div>
+  </div>
+  <div class="ribbon" aria-hidden="true"><div class="track">
+    <span>planeación</span><span>grabación</span><span>edición</span><span>UGC</span><span>community management</span><span>publicidad digital</span><span>planeación</span><span>grabación</span><span>edición</span><span>UGC</span><span>community management</span><span>publicidad digital</span>
+  </div></div>
+</section>
+
+<section class="block" id="servicios" style="padding-top:32px">
+  <div class="wrap">
+    <div class="sec-head">
+      <h2 class="h2">¿Qué necesita <em>tu marca?</em></h2>
+      <p>Elige por dónde empezar. Puedo encargarme de una parte o de todo el proceso, desde la idea hasta la publicación.</p>
+    </div>
+    <div class="cards" tabindex="0" aria-label="Servicios">
+      <article class="svc"><div class="ico"><svg><use href="#chat"/></svg></div><h3>Community management</h3><p>Gestión de tus redes: calendario, publicación y seguimiento de la comunidad.</p></article>
+      <article class="svc"><div class="ico"><svg><use href="#play"/></svg></div><h3>Contenido UGC</h3><p>Videos grabados por mí, naturales frente a cámara, para tu producto o servicio.</p></article>
+      <article class="svc"><div class="ico"><svg><use href="#grid"/></svg></div><h3>Creación de contenido</h3><p>Reels y carruseles pensados para tu comunidad y lo que quieres lograr.</p></article>
+      <article class="svc"><div class="ico"><svg><use href="#spark"/></svg></div><h3>Edición</h3><p>Ritmo, textos en pantalla y planos que mantienen la atención hasta el final.</p></article>
+      <article class="svc"><div class="ico"><svg><use href="#tag"/></svg></div><h3>Publicidad digital</h3><p>Contenido y estrategia para campañas pagas en redes sociales.</p></article>
+    </div>
+  </div>
+</section>
+
+<svg class="wave" viewBox="0 0 1440 60" preserveAspectRatio="none" aria-hidden="true"><path d="M0 30C120 5 240 5 360 30s240 25 360 0 240-25 360 0 240 25 360 0V60H0z" fill="#FFFCF8"/></svg>
+<div class="band">
+<section class="block" id="proyectos">
+  <div class="wrap">
+    <div class="sec-head">
+      <h2 class="h2">Algunos de mis <em>proyectos</em></h2>
+      <p>Aquí destaco la edición y mi experiencia en planeación, grabación y edición. Me adapto a cada empresa y enfoco el contenido según su comunidad y sus propósitos.</p>
+    </div>
+    <div class="toolbar">
+      <div class="chips" role="group" aria-label="Filtrar proyectos">
+        <button class="chip" type="button" data-f="all" aria-pressed="true">Todos</button>
+        <button class="chip" type="button" data-f="edu" aria-pressed="false">Educativo</button>
+        <button class="chip" type="button" data-f="serv" aria-pressed="false">Servicios</button>
+        <button class="chip" type="button" data-f="ugc" aria-pressed="false">UGC en tienda</button>
+      </div>
+      <div class="arrows">
+        <button class="icon-btn" type="button" id="prev" aria-label="Anterior"><svg style="transform:scaleX(-1)"><use href="#arrow"/></svg></button>
+        <button class="icon-btn" type="button" id="next" aria-label="Siguiente"><svg><use href="#arrow"/></svg></button>
+      </div>
+    </div>
+    <div class="reels" id="reels"></div>
+    <div class="proj-cta"><a class="btn line" href="https://www.instagram.com/camilagonv/" target="_blank" rel="noopener">Ver más en Instagram <svg><use href="#arrow"/></svg></a></div>
+  </div>
+</section>
+</div>
+<svg class="wave flip" viewBox="0 0 1440 60" preserveAspectRatio="none" aria-hidden="true"><path d="M0 30C120 5 240 5 360 30s240 25 360 0 240-25 360 0 240 25 360 0V60H0z" fill="#FFFCF8"/></svg>
+
+<section class="block" id="clientes">
+  <div class="wrap">
+    <div class="sec-head">
+      <h2 class="clients-title"><span class="s">¿Qué piensan mis</span><b>clientes?</b></h2>
+      <p>Mensajes reales que me han enviado marcas y agencias después de ver el contenido.</p>
+    </div>
+    <div class="chat">
+      <div class="col">
+        <div class="bubble xl"><p>“Acabé de salir de reunión con la marca, están demasiado felices con tu contenido. Sienten que eres muy creativa, que te expresas súper bien, además del buen manejo de las herramientas, el micrófono, los planos y la edición.”</p><footer>Agencia <i>5:08 p. m.</i></footer></div>
+        <div class="bubble me"><p>“Ellos te aman.”</p><footer>Agencia <i>1:16 p. m.</i></footer></div>
+      </div>
+      <div class="col">
+        <div class="bubble"><p>“El video gustó mucho al interior. Qué buen trabajo hizo.”</p><footer>Equipo Alkomprar <i>10:30 a. m.</i></footer></div>
+        <div class="bubble xl"><p>“A todo el equipo le gustó muchoo!!”</p><footer>Cliente <i>6:05 p. m.</i></footer></div>
+        <div class="bubble me"><p>“Nos sentimos demasiado orgullosos de ti.”</p><footer>Agencia <i>5:08 p. m.</i></footer></div>
+      </div>
+      <div class="col">
+        <div class="bubble"><p>“¡Hola! Muchas graciassss. Están perfectosss.”</p><footer>Cliente <i>3:25 p. m.</i></footer></div>
+        <div class="bubble me"><p>“¡Qué video tan bueno, me encantó!”</p><footer>Cliente <i>3:33 p. m.</i></footer></div>
+        <div class="bubble"><p>“Toooopppo. Me encanta.”</p><footer>Cliente <i>4:57 p. m.</i></footer></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="ribbon alt" aria-hidden="true"><div class="track">
+  <span>@camilagonv</span><span>contenido que conecta</span><span>@camilagonv</span><span>contenido que conecta</span><span>@camilagonv</span><span>contenido que conecta</span><span>@camilagonv</span><span>contenido que conecta</span><span>@camilagonv</span><span>contenido que conecta</span>
+</div></div>
+
+<section class="block" style="padding-top:24px">
+  <div class="wrap">
+    <div class="why">
+      <div class="why-art"><span class="eyebrow" style="color:var(--blush);position:relative">Por qué trabajar conmigo</span><h2>Contenido <em>de principio a fin</em></h2></div>
+      <ul class="why-list">
+        <li><div><b>Todo el proceso en una persona</b>Planeo la idea, la grabo y la edito. Tu equipo no tiene que coordinar a varios proveedores.</div></li>
+        <li><div><b>Hecho para tu comunidad</b>Adapto el tono, el formato y la edición a tu audiencia y a lo que quieres lograr.</div></li>
+        <li><div><b>Cómoda frente a cámara</b>Manejo micrófono, planos y herramientas, como destacan las marcas con las que he trabajado.</div></li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<svg class="wave" viewBox="0 0 1440 60" preserveAspectRatio="none" aria-hidden="true"><path d="M0 30C120 5 240 5 360 30s240 25 360 0 240-25 360 0 240 25 360 0V60H0z" fill="#F5EFE8"/></svg>
+<div class="band bone">
+<section class="block" id="planes">
+  <div class="wrap">
+    <div class="sec-head">
+      <h2 class="h2">Planes <em>mensuales</em></h2>
+      <p>Dos formas de trabajar juntas. Si necesitas algo distinto, escríbeme y armamos un plan a tu medida.</p>
+    </div>
+    <div class="plans">
+      <article class="plan">
+        <span class="pill">Para crecer en redes</span>
+        <h3>Plan Pro</h3>
+        <p class="for">Para marcas que necesitan a alguien que gestione sus redes de forma constante.</p>
+        <ul>
+          <li><svg><use href="#check"/></svg>Optimización del perfil</li>
+          <li><svg><use href="#check"/></svg>25 publicaciones mensuales</li>
+          <li><svg><use href="#check"/></svg>Estrategia y calendario de contenido</li>
+          <li><svg><use href="#check"/></svg>Publicación y seguimiento</li>
+          <li><svg><use href="#check"/></svg>Estrategia de comunicación</li>
+          <li><svg><use href="#check"/></svg>Creación de contenido visual</li>
+        </ul>
+        <div class="price">$1.500.000 <small>COP / mes</small></div>
+        <button class="btn line pick" type="button" data-plan="Plan Pro">Elegir Plan Pro <svg><use href="#arrow"/></svg></button>
+      </article>
+      <article class="plan feat">
+        <span class="pill">Más video</span>
+        <h3>Plan Premium</h3>
+        <p class="for">Para marcas que quieren reels propios y un acompañamiento cercano.</p>
+        <ul>
+          <li><svg><use href="#check"/></svg>Creación de contenido</li>
+          <li><svg><use href="#check"/></svg>15 reels mensuales</li>
+          <li><svg><use href="#check"/></svg>4 carruseles mensuales</li>
+          <li><svg><use href="#check"/></svg>Estrategia y calendario de contenido</li>
+          <li><svg><use href="#check"/></svg>4 encuentros mensuales</li>
+          <li><svg><use href="#check"/></svg>Análisis básico de métricas</li>
+        </ul>
+        <div class="price">$2.000.000 <small>COP / mes</small></div>
+        <button class="btn primary pick" type="button" data-plan="Plan Premium">Elegir Plan Premium <svg><use href="#arrow"/></svg></button>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="block" id="perfil" style="padding-top:0">
+  <div class="wrap">
+    <div class="profile">
+      <div class="panel">
+        <span class="eyebrow">Perfil</span>
+        <h3 class="ph">Formación</h3>
+        <div class="edu">
+          <div class="edu-item"><span class="n"><svg><use href="#user"/></svg></span><div><b>Profesional en Comunicación Social</b><span>Universidad Francisco de Paula Santander</span></div></div>
+          <div class="edu-item"><span class="n"><svg><use href="#play"/></svg></span><div><b>Agencia Creative Evolution</b><span>Curso completo de creación de contenido y UGC para redes sociales · Estrategia definitiva para crecer en redes sociales</span></div></div>
+        </div>
+      </div>
+      <div class="panel blush">
+        <svg class="burst" viewBox="0 0 100 100" aria-hidden="true"><g stroke="currentColor" stroke-width="3.4"><line x1="50" y1="0" x2="50" y2="100"/><line x1="0" y1="50" x2="100" y2="50"/><line x1="15" y1="15" x2="85" y2="85"/><line x1="85" y1="15" x2="15" y2="85"/><line x1="31" y1="4" x2="69" y2="96"/><line x1="69" y1="4" x2="31" y2="96"/><line x1="4" y1="31" x2="96" y2="69"/><line x1="4" y1="69" x2="96" y2="31"/></g></svg>
+        <span class="eyebrow">Lo que hago mejor</span>
+        <h3 class="ph">Habilidades</h3>
+        <ul class="skills">
+          <li>Producción de contenido para redes</li><li>Edición de video</li><li>Gestión de redes sociales</li><li>Publicidad digital</li><li>Programación de contenido</li><li>Adaptabilidad a diferentes ambientes</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+</div>
+<svg class="wave flip" viewBox="0 0 1440 60" preserveAspectRatio="none" aria-hidden="true"><path d="M0 30C120 5 240 5 360 30s240 25 360 0 240-25 360 0 240 25 360 0V60H0z" fill="#F5EFE8"/></svg>
+
+<section class="block" id="contacto">
+  <div class="wrap">
+    <div class="contact">
+      <div class="panel">
+        <span class="eyebrow">Contacto</span>
+        <h2>Hablemos de tu <em>próximo contenido</em></h2>
+        <div class="direct">
+          <div class="drow"><div><small>WhatsApp</small><span id="tel">302 463 3657</span></div><button class="btn soft" type="button" id="copyTel">Copiar número</button></div>
+          <div class="drow"><div><small>Instagram · TikTok</small><span>@camilagonv</span></div>
+            <div style="display:flex;gap:8px"><a class="icon-btn" href="https://www.instagram.com/camilagonv/" target="_blank" rel="noopener" aria-label="Instagram"><svg><use href="#ig"/></svg></a><a class="icon-btn" href="https://www.tiktok.com/@camilagonv" target="_blank" rel="noopener" aria-label="TikTok"><svg><use href="#tt"/></svg></a></div></div>
+        </div>
+      </div>
+      <div class="panel blush">
+        <span class="eyebrow">Arma tu mensaje</span>
+        <h3 class="ph" style="margin-top:6px">Cuéntame de tu marca</h3>
+        <form id="f">
+          <div class="frow">
+            <label for="fn">Tu nombre<input id="fn" autocomplete="name" placeholder="Ej. Laura"></label>
+            <label for="fb">Marca o empresa<input id="fb" placeholder="Ej. Tienda Aurora"></label>
+          </div>
+          <label for="fp">Me interesa
+            <select id="fp"><option>Plan Pro</option><option>Plan Premium</option><option>Contenido UGC puntual</option><option>Edición de video</option><option>Algo a la medida</option></select>
+          </label>
+          <label for="fm">Mensaje<textarea id="fm" placeholder="¿Qué quieres lograr con tu contenido?"></textarea></label>
+          <a class="btn primary" id="send" href="https://wa.me/573024633657" target="_blank" rel="noopener" style="justify-content:center"><svg><use href="#wa"/></svg> Enviar por WhatsApp</a>
+          <p class="hint">Se abre WhatsApp con tu mensaje listo para enviar.</p>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer class="site"><a class="logo" href="#inicio">camila<b>.</b>gv</a>© 2026 Camila González · Community Manager, UGC y edición</footer>
+
+<nav class="dock" aria-label="Accesos rápidos">
+  <a href="#proyectos"><svg><use href="#play"/></svg>Proyectos</a>
+  <a href="#clientes"><svg><use href="#chat"/></svg>Clientes</a>
+  <a href="#planes"><svg><use href="#tag"/></svg>Planes</a>
+  <a href="#contacto"><svg><use href="#wa"/></svg>Contacto</a>
+</nav>
+
+<div class="lb" id="lb" hidden role="dialog" aria-modal="true" aria-labelledby="lbT">
+  <div class="lb-card">
+    <button class="icon-btn lb-close" type="button" id="lbX" aria-label="Cerrar">✕</button>
+    <div class="screen"><img id="lbI" alt=""></div>
+    <div class="lb-info">
+      <span class="eyebrow" id="lbC"></span>
+      <h3 id="lbT"></h3>
+      <p id="lbD"></p>
+      <a class="btn primary" id="lbL" href="https://www.instagram.com/camilagonv/" target="_blank" rel="noopener">Ver en Instagram <svg><use href="#arrow"/></svg></a>
+    </div>
+  </div>
+</div>
+
+<script>
+var R=[
+ {img:'img/v1.jpg',t:'Peeling químico',c:'edu',tag:'Educativo',brand:'Jorgelis Flórez',d:'Guion, grabación y edición de un video educativo sobre el peeling químico.',top:true},
+ {img:'img/v2.jpg',t:'Limpieza + peeling químico',c:'serv',tag:'Servicio',brand:'Jorgelis Flórez',d:'Video con antes y después para mostrar el resultado del tratamiento.'},
+ {img:'img/v3.jpg',t:'¿No cambias las fundas de tus almohadas?',c:'edu',tag:'Educativo',brand:'Jorgelis Flórez',d:'Consejo de cuidado de la piel con gancho en los primeros segundos.',top:true},
+ {img:'img/v4.jpg',t:'Depilación láser',c:'serv',tag:'Servicio',brand:'Jorgelis Flórez',d:'Demostración del servicio grabada en cabina.'},
+ {img:'img/v5.jpg',t:'Visita a tienda',c:'ugc',tag:'UGC',brand:'Alkomprar',d:'Contenido UGC grabado en punto de venta.'},
+ {img:'img/v6.jpg',t:'Rutina de limpieza',c:'edu',tag:'Educativo',brand:'Jorgelis Flórez',d:'Producto en cámara explicado paso a paso.'}
+];
+var box=document.getElementById('reels');
+R.forEach(function(r,i){
+  var el=document.createElement('article');el.className='reel';el.dataset.c=r.c;
+  el.innerHTML='<button class="card-link" type="button" data-i="'+i+'"><div class="screen"><img src="'+r.img+'" alt="Reel: '+r.t+'" loading="lazy"><span class="tag">'+r.tag+'</span>'+(r.top?'<span class="badge">Top</span>':'')+'</div><div class="meta"><b>'+r.t+'</b><span>'+r.brand+'</span></div></button>';
+  box.appendChild(el);
+});
+document.querySelectorAll('.chip').forEach(function(ch){ch.addEventListener('click',function(){
+  document.querySelectorAll('.chip').forEach(function(x){x.setAttribute('aria-pressed','false')});
+  ch.setAttribute('aria-pressed','true');var f=ch.dataset.f;
+  box.querySelectorAll('.reel').forEach(function(r){r.hidden=!(f==='all'||r.dataset.c===f)});
+  box.scrollLeft=0;
+})});
+function step(d){var c=box.querySelector('.reel:not([hidden])');box.scrollBy({left:d*((c?c.offsetWidth:240)+20),behavior:'smooth'})}
+document.getElementById('prev').onclick=function(){step(-1)};
+document.getElementById('next').onclick=function(){step(1)};
+
+var lb=document.getElementById('lb'),last;
+box.addEventListener('click',function(e){var b=e.target.closest('.card-link');if(!b)return;last=b;var r=R[b.dataset.i];
+  var im=document.getElementById('lbI');im.src=r.img;im.alt='Reel: '+r.t;
+  document.getElementById('lbT').textContent=r.t;document.getElementById('lbC').textContent=r.brand+' · '+r.tag;
+  document.getElementById('lbD').textContent=r.d;document.getElementById('lbL').href=r.url||'https://www.instagram.com/camilagonv/';lb.hidden=false;document.getElementById('lbX').focus();});
+function closeLb(){lb.hidden=true;if(last)last.focus()}
+document.getElementById('lbX').onclick=closeLb;
+lb.addEventListener('click',function(e){if(e.target===lb)closeLb()});
+document.addEventListener('keydown',function(e){if(e.key==='Escape'&&!lb.hidden)closeLb()});
+
+var fp=document.getElementById('fp');
+function upd(){
+  var n=document.getElementById('fn').value.trim(),b=document.getElementById('fb').value.trim(),m=document.getElementById('fm').value.trim();
+  var txt='Hola Camila'+(n?', soy '+n:'')+(b?' de '+b:'')+'. Me interesa: '+fp.value+'.'+(m?' '+m:'');
+  document.getElementById('send').href='https://wa.me/573024633657?text='+encodeURIComponent(txt);
+}
+document.querySelectorAll('.pick').forEach(function(b){b.addEventListener('click',function(){
+  fp.value=b.dataset.plan;upd();document.getElementById('contacto').scrollIntoView({behavior:'smooth'});
+  setTimeout(function(){document.getElementById('fn').focus({preventScroll:true})},700);
+})});
+['fn','fb','fm','fp'].forEach(function(id){var el=document.getElementById(id);el.addEventListener('input',upd);el.addEventListener('change',upd)});
+document.getElementById('f').addEventListener('submit',function(e){e.preventDefault()});
+upd();
+
+document.getElementById('copyTel').addEventListener('click',function(){
+  var b=this;function ok(){b.textContent='¡Copiado!';setTimeout(function(){b.textContent='Copiar número'},1800)}
+  function sel(){var r=document.createRange();r.selectNodeContents(document.getElementById('tel'));var s=getSelection();s.removeAllRanges();s.addRange(r);b.textContent='Selecciónalo y copia'}
+  try{navigator.clipboard.writeText('3024633657').then(ok,sel)}catch(e){sel()}
+});
+
+if('IntersectionObserver' in window){
+  var io=new IntersectionObserver(function(es){es.forEach(function(en){if(en.isIntersecting){var id=en.target.id;
+    document.querySelectorAll('.menu a,.dock a').forEach(function(a){a.classList.toggle('on',a.getAttribute('href')==='#'+id)})}})},{rootMargin:'-45% 0px -50% 0px'});
+  ['servicios','proyectos','clientes','planes','perfil','contacto'].forEach(function(id){var s=document.getElementById(id);if(s)io.observe(s)});
+}
+</script>
+
+</body>
+</html>
